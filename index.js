@@ -21,7 +21,7 @@ var board = new five.Board({
 board.on("ready", function() {
     var sensor = new five.Sensor({
         pin: "A1",
-        freq:25,
+        freq:250,
         threshold: 100
     });
     sensor.on("change", function() {

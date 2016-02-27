@@ -1,6 +1,9 @@
 #SniffleGiggle
 ![](https://s.yimg.com/ny/api/res/1.2/2APGDmUiGLcoZ7fJwcX92A--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NDAw/http://l.yimg.com/os/publish-images/tv/2014-01-10/306687d5-3936-4f7d-9056-a5212470bfbe_10sniffies.gif)
 
+
+:poop::poop::poop::poop::poop:
+
 ##What is this?
 The idea is largely based on this [video](https://www.youtube.com/watch?v=fveM7aTbyuE).
 
@@ -20,13 +23,23 @@ When you execute that last command you're looking to see that the status of the 
 
 `npm install johnny-five galileo-io express http socket.io`
 
-In your home directory, if you just do `ls` then you should see all of the above node modules installed on the Edison board. If this is the case, use a program like Filezilla to connect to your Edison. When you connect it should look like the following:
-![]()
+In your home directory, if you just do `ls` then you should see all of the above node modules installed on the Edison board. If this is the case, use a program like FileZilla to connect to your Edison. Just use the IP of your Edison, the root user and it's password like you would with a normal server.
+![](screenshots/connecting.png)
 
-Place all of the files in our repository into the root folder. Now, from your SSH screen connection to the Edison, simply run:`node index.js` and then go to the IP of your Edison in the browser. If you did everything correctly you should see something like this:
-![]()
+When you connect it should look like the following:
+![](screenshots/filezilla.png)
 
-Now proceed to pull some tissues and hear some gloriously sassy audio *player*!
+Place all of the files in our repository into the `home/root` folder. Now, from your SSH screen connection to the Edison, simply run: `node index.js` and then go to the IP of your Edison in the browser. Your terminal should look like this:
+![](screenshots/term1.png)
+
+When a vibration occurs you should see some more events like this:
+![](screenshots/term2.png)
+
+If you did everything correctly you should see something like this:
+![](screenshots/before_play.png)
+
+Now proceed to pull some tissues and hear some gloriously s:collision:ssy audio *player*!
+![](screenshots/after_play.png)
 
 ##Important note about Piezo Sensor.
 In our `index.js` file you will see the follwoing lines:
