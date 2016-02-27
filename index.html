@@ -3,16 +3,19 @@
 
 <head>
     <script src="/socket.io/socket.io.js"></script>
-    <audio src="test.mp3" type="audio/mp3" id='0'>
-    <audio src="dry.mp3" type="audio/mp3" id='1'>
-    <audio src="dont_deserve.mp3" type="audio/mp3" id='2'>
-    <audio src="bless_you.mp3" type="audio/mp3" id='3'>
+    <audio src="sassy_audio/blow_that_nose_playa.mp3" type="audio/mp3" id='0'>
+    <audio src="sassy_audio/claritin.mp3" type="audio/mp3" id='1'>
+    <audio src="sassy_audio/life_is_what_you_make.mp3" type="audio/mp3" id='2'>
+    <audio src="sassy_audio/momma_love.mp3" type="audio/mp3" id='3'>
+    <audio src="sassy_audio/sinus_playboy.mp3" type="audio/mp3" id='4'>
+    <audio src="sassy_audio/snippies.mp3" type="audio/mp3" id='5'>
+    <audio src="sassy_audio/vitamin_c.mp3" type="audio/mp3" id='6'>
     <script>
     var socket = io();
     var ranOnce = false;
     socket.on('news', function(data) {
         if(!ranOnce){
-            var rand = Math.round(Math.random()*4);
+            var rand = Math.round(Math.random()*7);
             var audioElement = document.getElementById(rand);
             console.log(rand);
         	console.log(audioElement);
