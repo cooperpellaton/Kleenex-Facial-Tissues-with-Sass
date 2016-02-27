@@ -9,7 +9,7 @@
 
 The idea is largely based on this [video](https://www.youtube.com/watch?v=fveM7aTbyuE).
 
-If you still don't understand: this is a stupid simple hack. Our first hardware hack, this uses an Intel Edison paired with a Piezo vibration sensor to detect state changes. If a significant vibration is felt, an emission occurs thanks to Socket.io which then triggers the client to play audio. 
+If you still don't understand: this is a stupid simple hack. Our first hardware hack, this uses an Intel Edison paired with a ~~Piezo vibration sensor~~ to detect state changes. *At a later time we determined that a vibration sensor was a bad choice because the barrier to entry for a vibration was too high. We've instead opted to use a version 1.1 audio sensor to detect a state audio change within the tissue box. Pleae keep note of this as all of the references to the vibration sensor were since adapted to suit a microphone interface. You can see the proper code incorporating the microphone in the `index.js` file.* If a significant vibration is felt, an emission occurs thanks to Socket.io which then triggers the client to play audio. 
 
 Optimally, we would've had a speaker directly attached to the Edison board but MLH, nor anyone at HampHack '16 had an audio interface. Thus we built this in a really hacky way, using the Edison to detect the tissue being pulled and then alerting the client to play audio in the browser.
 
@@ -34,7 +34,7 @@ When you connect it should look like the following:
 Place all of the files in our repository into the `home/root` folder. Now, from your SSH screen connection to the Edison, simply run: `node index.js` and then go to the IP of your Edison in the browser. Your terminal should look like this:
 ![](screenshots/term1.png)
 
-When a vibration occurs you should see some more events like this:
+When a sound is heard you should see some more events like this:
 ![](screenshots/term2.png)
 
 If you did everything correctly you should see something like this:
