@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <audio src="test.mp3" type="audio/mp3" id='0'>
+    <audio src="dry.mp3" type="audio/mp3" id='1'>
+    <audio src="dont_deserve.mp3" type="audio/mp3" id='2'>
+    <audio src="bless_you.mp3" type="audio/mp3" id='3'>
+    <script>
+    var socket = io();
+    var ranOnce = false;
+    socket.on('news', function(data) {
+        if(!ranOnce){
+            var rand = Math.round(Math.random()*4);
+            var audioElement = document.getElementById(rand);
+            console.log(rand);
+        	console.log(audioElement);
+            audioElement.play();
+        }
+        ranOnce = !ranOnce;
+    });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
