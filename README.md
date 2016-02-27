@@ -6,6 +6,7 @@
 
 ##What is this?
 ![](screenshots/yGHH1c.gif)
+
 The idea is largely based on this [video](https://www.youtube.com/watch?v=fveM7aTbyuE).
 
 If you still don't understand: this is a stupid simple hack. Our first hardware hack, this uses an Intel Edison paired with a Piezo vibration sensor to detect state changes. If a significant vibration is felt, an emission occurs thanks to Socket.io which then triggers the client to play audio. 
