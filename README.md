@@ -48,3 +48,10 @@ var sensor = new five.Sensor({
         pin: "A1"
 ```
 This means that our Piezo vibration sensor is connected via the Edison expansion board to pinout A1. If the connection point of your sensor is different then ours then modify the location of the 'pin' setting. If you don't do this and your sensor isn't connected to `A1` then the above code will execute but nothing will happen because you never established the location of your sensor from which the data is being pulled!
+
+##Pictures of the Edison.
+![](screenshots/edison1.jpg)
+
+![](screenshots/edison2.jpg)
+
+![](screenshots/edison3.jpg)
