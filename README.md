@@ -7,6 +7,8 @@
 ##What is this?
 ![](screenshots/yGHH1c.gif)
 
+See a video demonstration of our talking tissue box [*here*](https://www.youtube.com/watch?v=Dwj4QJ9sQQc&feature=youtu.be).
+
 The idea is largely based on this [video](https://www.youtube.com/watch?v=fveM7aTbyuE).
 
 If you still don't understand: this is a stupid simple hack. Our first hardware hack, this uses an Intel Edison paired with a ~~Piezo vibration sensor~~ to detect state changes. *At a later time we determined that a vibration sensor was a bad choice because the barrier to entry for a vibration was too high. We've instead opted to use a version 1.1 audio sensor to detect a state audio change within the tissue box. Pleae keep note of this as all of the references to the vibration sensor were since adapted to suit a microphone interface. You can see the proper code incorporating the microphone in the `index.js` file.* If a significant vibration is felt, an emission occurs thanks to Socket.io which then triggers the client to play audio. 
