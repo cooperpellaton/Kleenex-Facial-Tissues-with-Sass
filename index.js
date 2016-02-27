@@ -22,12 +22,26 @@ board.on("ready", function() {
     var sensor = new five.Sensor({
         pin: "A1",
         freq:250,
-        threshold: 100
+        threshold: 1
     });
-    sensor.on("change", function() {
+
+    var mic = new five.Sensor({
+        pin: "A0",
+        freq:100
+        // threshold: 50
+    });
+    mic.within([300, 1500], function(){
         console.log(this.value);
+        console.log("sound worked");
         io.emit('news');
-        });
+    })
+
+
+    // light.on("change", function() {
+    //     console.log("Ambient Light Level: ", this.level);
+    //     io.emit('news');
+    // });
+    
 });
 
     // sensor.within([500, 1500], function() {
